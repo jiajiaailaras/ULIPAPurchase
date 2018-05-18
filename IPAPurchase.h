@@ -43,8 +43,10 @@ typedef void(^PayResult)(BOOL isSuccess,NSString *certificate,NSString *errorMsg
 @property (nonatomic,copy)NSString * channel_trade_sn;//channel_trade_sn
 
 
-+ (instancetype)manager;
+@property(nonatomic,copy)NSString * amount_type; //货币类型
+@property(nonatomic,copy)NSString * platformAmount; //货币金额
 
++ (instancetype)manager;
 
 /**
  启动内购工具
@@ -55,7 +57,6 @@ typedef void(^PayResult)(BOOL isSuccess,NSString *certificate,NSString *errorMsg
 -(void)stopManager;
 /**
  内购支付
-
  @param productID 内购商品ID
  @param payResult 结果
  */
