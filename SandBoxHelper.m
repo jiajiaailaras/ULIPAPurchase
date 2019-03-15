@@ -70,6 +70,26 @@
     
 }
 
++(NSString *)exitResourePath{
+    
+    NSString *path = [[self libPrefPath] stringByAppendingFormat:@"/ExitResourePath"];
+    
+    [self hasLive:path];
+    
+    
+    return path;
+}
+
++(NSString *)tempOrderPath{
+  
+    NSString *path = [[self libPrefPath] stringByAppendingFormat:@"/tempOrderPath"];
+    
+    [self hasLive:path];
+   
+    return path;
+    
+}
+
 +(NSString *)crashLogInfo{
     
     NSString * path = [[self libPrefPath]stringByAppendingFormat:@"/crashLogInfoPath"];

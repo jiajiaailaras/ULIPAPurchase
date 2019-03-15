@@ -11,7 +11,6 @@
 @interface SandBoxHelper : NSObject
 
 + (NSString *)homePath;             // 程序主目录，可见子目录(3个):Documents、Library、tmp
-
 + (NSString *)appPath;              // 程序目录，不能存任何东西
 
 + (NSString *)docPath;              // 文档目录，需要ITUNES同步备份的数据存这里，可存放用户数据
@@ -27,4 +26,7 @@
 
 +(NSString *)crashLogInfo;          //存储崩溃日志的方法;
 
++(NSString *)exitResourePath;   //存储退出资源的路径
+
++(NSString *)tempOrderPath;         //保存临时订单
 @end
