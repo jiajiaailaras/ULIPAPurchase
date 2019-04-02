@@ -489,7 +489,7 @@ static IPAPurchase * manager = nil;
     BOOL isContain = NO;
     
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSError * error;
+    NSError * error=nil;
     NSArray * cacheFileNameArray = [fileManager contentsOfDirectoryAtPath:[SandBoxHelper SuccessIapPath] error:&error];
     
     if (cacheFileNameArray.count == 0) {
